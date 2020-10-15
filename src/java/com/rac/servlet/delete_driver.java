@@ -40,13 +40,15 @@ public class delete_driver extends HttpServlet {
             
             response.setContentType("text/html;charset=UTF-8");
             String Id = request.getParameter("hid_id");
+            System.out.println(Id);
             new DriverDaoImpl().deleteDriver(commonController.getIntOrZeroFromString(Id));
-            response.sendRedirect("ManageDrivers.jsp"); 
-            
+            response.sendRedirect("ManageDrivers.jsp");
+
         } catch (SQLException ex) {
             Logger.getLogger(delete_driver.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

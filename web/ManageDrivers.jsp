@@ -171,7 +171,7 @@
                         </td>
                         <td>   
                             <form action="delete_driver">
-                                <input type="submit" value="Delete" name="hid_id" class="form-control  btn-warning m-0 px-3">
+                                <input type="submit" value="Delete" name="hid_id_visible" class="form-control  btn-warning m-0 px-3">
                                 <input type="hidden" name="hid_id" value="<%= rset.getString("driver_id")%>">
                             </form>         
                         </td>
