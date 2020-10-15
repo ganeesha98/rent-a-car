@@ -39,7 +39,7 @@ public class delete_customer extends HttpServlet {
         try {
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
-            String Id = request.getParameter("delete_customer");
+            String Id = request.getParameter("hid_id");
             new CustomerDaoImpl().DeleteCustomer(commonController.getIntOrZeroFromString(Id));
             response.sendRedirect("customerManagement.jsp"); 
         } catch (SQLException ex) {

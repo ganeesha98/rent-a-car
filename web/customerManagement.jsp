@@ -84,7 +84,7 @@
                         <td>   
                             <form action="delete_customer">
                                 <input type="submit" value="Delete" name="btn_delete_customer" class="form-control  btn-warning m-0 px-3">
-                                <input type="hidden" name="hid_cust_id" value="<%= rset.getString("customer_id")%>">
+                                <input type="hidden" name="hid_id" value="<%= rset.getString("customer_id")%>">
                             </form>         
                         </td>
                     </tr>
