@@ -172,9 +172,9 @@
                             </div>
                         </td>
                         <td>   
-                            <form action="delete_customer">
+                            <form action="delete_employee">
                                 <input type="submit" value="Delete" name="delete_employee" class="form-control  btn-warning m-0 px-3">
-                                <input type="hidden" name="hid_cust_id" value="<%= rset.getString("employee_id")%>">
+                                <input type="hidden" name="hid_id" value="<%= rset.getString("employee_id")%>">
                             </form>         
                         </td>
                     </tr>
