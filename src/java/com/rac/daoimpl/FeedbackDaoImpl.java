@@ -55,7 +55,6 @@ public class FeedbackDaoImpl implements FeedbackDao {
     }
 
     public boolean updateFeedbackAsValid(int Id) throws SQLException {
-        System.out.println("  in dao impllll" + Id);
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update feedbacks set feedback_status=1 where feedback_id=?");
         ps.setInt(1, Id);
@@ -65,7 +64,6 @@ public class FeedbackDaoImpl implements FeedbackDao {
     }
 
     public boolean updateFeedbackAsInvalid(int Id) throws SQLException {
-        System.out.println("  in dao impllll 2222" + Id);
         Connection con = DatabaseConnection.getDatabaseConnection();
         PreparedStatement ps = con.prepareStatement("update feedbacks set feedback_status=0 where feedback_id=?");
         ps.setInt(1, Id);
