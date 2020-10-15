@@ -53,7 +53,7 @@ public class VehicleDaoImpl implements VehicleDao {
     @Override
     public boolean DeleteVehicle(int VehicleId) throws SQLException {
         Connection con = DatabaseConnection.getDatabaseConnection();
-        PreparedStatement ps = con.prepareStatement("delete from vehicles whare vehicle_id=?");
+        PreparedStatement ps = con.prepareStatement("delete from vehicles where vehicle_id=?");
         ps.setInt(1, VehicleId);
         ps.executeUpdate();
         return true;

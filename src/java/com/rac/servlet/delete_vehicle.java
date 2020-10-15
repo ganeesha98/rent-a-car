@@ -8,7 +8,6 @@ package com.rac.servlet;
 import com.rac.controller.commonController;
 import com.rac.daoimpl.VehicleDaoImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,6 +25,8 @@ public class delete_vehicle extends HttpServlet {
         try {
             response.setContentType("text/html;charset=UTF-8");
             String id = request.getParameter("hid_id");
+            
+            System.out.println("delete_vehicle : " + id);
             new VehicleDaoImpl().DeleteVehicle(commonController.getIntOrZeroFromString(id));
             response.sendRedirect("ManageVehicles.jsp");
 
